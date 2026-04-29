@@ -23,7 +23,7 @@ A modern geospatial web application built with Next.js, React, TypeScript, and M
 1. **Clone the repository:**
 ```bash
 git clone <repository-url>
-cd webgis-app
+cd webgis-project
 ```
 
 2. **Install dependencies:**
@@ -184,9 +184,12 @@ webgis-app/
 4. Add tests for new utilities
 5. Update documentation for API changes
 
-## License
+## Tutorials
+In order to support this project I did some research:
 
-See LICENSE file for details.
+- [Udemy Tutorial: Interactive maps with Mapbox!](https://www.udemy.com/course/interactive-maps-with-mapbox)
+- [Mapbox Documentation Guide] (https://docs.mapbox.com/mapbox-gl-js/guides/)
+
 
 ## Team Members
 - [Despoina Papadopoulou](https://github.com/Despoina2000)
