@@ -6,9 +6,13 @@ import mapboxgl from "mapbox-gl";
 export const showPopup = (
   map: mapboxgl.Map,
   lngLat: mapboxgl.LngLat,
-  htmlContent: string
+  htmlContent: string,
 ): void => {
-  new mapboxgl.Popup()
+  new mapboxgl.Popup({
+    className: "custom-popup",
+    closeButton: true,
+    closeOnClick: true,
+  })
     .setLngLat(lngLat)
     .setHTML(htmlContent)
     .addTo(map);
@@ -19,7 +23,7 @@ export const showPopup = (
  */
 export const setupLayerHoverCursor = (
   map: mapboxgl.Map,
-  layerId: string
+  layerId: string,
 ): void => {
   map.on("mouseenter", layerId, () => {
     map.getCanvas().style.cursor = "pointer";
@@ -35,7 +39,7 @@ export const setupLayerHoverCursor = (
  */
 export const setupLayersHoverCursor = (
   map: mapboxgl.Map,
-  layerIds: string[]
+  layerIds: string[],
 ): void => {
   layerIds.forEach((layerId) => {
     setupLayerHoverCursor(map, layerId);
@@ -47,7 +51,7 @@ export const setupLayersHoverCursor = (
  */
 export const handleClusterClick = (
   map: mapboxgl.Map,
-  e: mapboxgl.MapMouseEvent
+  e: mapboxgl.MapMouseEvent,
 ): void => {
   if (!e.features || e.features.length === 0) return;
 
@@ -71,7 +75,7 @@ export const handleClusterClick = (
  */
 export const handlePointClick = (
   map: mapboxgl.Map,
-  e: mapboxgl.MapMouseEvent
+  e: mapboxgl.MapMouseEvent,
 ): void => {
   if (!e.features || e.features.length === 0) return;
 
@@ -79,11 +83,9 @@ export const handlePointClick = (
   showPopup(
     map,
     e.lngLat,
-    `<strong>${props?.name || "Point"}</strong><br/>${props?.category || ""}<br/>${props?.description || ""}`
+    `<strong>${props?.name || "Point"}</strong><br/>${props?.category || ""}<br/>${props?.description || ""}`,
   );
 };
-
-
 
 /**
  * Handle polygon click - show popup with polygon info
@@ -91,7 +93,7 @@ export const handlePointClick = (
  */
 export const handlePolygonClick = (
   map: mapboxgl.Map,
-  e: mapboxgl.MapMouseEvent
+  e: mapboxgl.MapMouseEvent,
 ): void => {
   if (!e.features || e.features.length === 0) return;
 
@@ -107,7 +109,7 @@ export const handlePolygonClick = (
   showPopup(
     map,
     e.lngLat,
-    `<strong>${props?.name || "Polygon"}</strong><br/>${props?.info || ""}`
+    `<strong>${props?.name || "Polygon"}</strong><br/>${props?.info || ""}`,
   );
 };
 

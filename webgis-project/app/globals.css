@@ -1,6 +1,7 @@
 
 
 @import "mapbox-gl/dist/mapbox-gl.css";
+@import "./styles/mapbox-popup.css";
 
 * {
   box-sizing: border-box;
@@ -18,36 +19,6 @@ body {
 .map-container {
   height: 100vh;
   width: 100%;
-}
-
-/* Custom popup styles */
-.mapboxgl-popup {
-  max-width: 300px;
-}
-
-.mapboxgl-popup-content {
-  padding: 12px 16px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  font-family: inherit;
-}
-
-.mapboxgl-popup-content h3 {
-  margin: 0 0 8px 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: #1f2937;
-}
-
-.mapboxgl-popup-content p {
-  margin: 4px 0;
-  font-size: 13px;
-  color: #4b5563;
-}
-
-.mapboxgl-popup-content hr {
-  margin: 8px 0;
-  border-color: #e5e7eb;
 }
 
 /* Cluster styling overrides */
