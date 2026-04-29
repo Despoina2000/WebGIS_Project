@@ -82,7 +82,7 @@ webgis-app/
 
 ## Architecture & Design Decisions
 
-### 1. **Utility-First Architecture**
+### 1. **Utility Architecture**
 - **Decision**: Separated concerns into focused utility modules (`dataLoadingUtils`, `layerSetupUtils`, etc.)
 - **Benefit**: Improves testability, reusability, and maintainability. Each utility is independently testable.
 - **Trade-off**: More files, but easier to understand and modify individual features.
@@ -109,7 +109,7 @@ webgis-app/
 
 ## Testing Coverage
 
-**46 test cases** covering:
+**test cases** covering:
 - **geoJsonUtil** (5 tests) - GeoJSON separation logic
 - **layerSetupUtils** (13 tests) - Mapbox layer creation and configuration
 - **layerVisibilityUtils** (8 tests) - Layer visibility management
@@ -125,37 +125,40 @@ webgis-app/
 2. **Performance Optimization**
    - Add performance metrics monitoring
    - Optimize GeoJSON rendering for large datasets (1000+ features)
+  
+3. **Scale of Map**
+   - Allow the user to have maximum zoom in/out of the map
 
 
 
 ### Medium Term (Enhancement)
-3. **Advanced Filtering**
+4. **Advanced Filtering**
    - Add property-based filters (date range, category, area)
    - Support complex filter expressions
    - Real-time search and filtering UI
 
 
-4. **Support New features**
+5. **Support New features**
    - User being able to add there own points and polygons by interacting with map
 
 ### Long Term (Architecture)
-5. **Map Feature Store**
+6. **Map Feature Store**
    - Implement a feature selection/management system
    - Multiple selection support
    - Feature history/undo-redo
    - Export selected features
 
-6. **Real-Time Data Updates**
+7. **Real-Time Data Updates**
    - WebSocket support for live data updates
    - Delta updates instead of full reloads
    - Conflict resolution for concurrent updates
 
-7. **Advanced Geospatial Operations**
+8. **Advanced Geospatial Operations**
    - Distance calculations, area measurements
    - Polygon intersection/union operations
    - Heatmap visualization
 
-8. **Mobile Responsiveness**
+9. **Mobile Responsiveness**
     - Touch gesture support (pinch zoom, rotation)
     - Mobile-optimized controls and UI
     - Offline-first architecture for mobile users
@@ -188,7 +191,7 @@ webgis-app/
 In order to support this project I did some research:
 
 - [Udemy Tutorial: Interactive maps with Mapbox!](https://www.udemy.com/course/interactive-maps-with-mapbox)
-- [Mapbox Documentation Guide] (https://docs.mapbox.com/mapbox-gl-js/guides/)
+- [Mapbox Documentation Guide](https://docs.mapbox.com/mapbox-gl-js/guides/)
 
 
 ## Team Members
