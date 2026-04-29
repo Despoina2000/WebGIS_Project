@@ -1,7 +1,7 @@
 "use client";
 
 import { ViewMode } from "../models/types";
-import styles from "../styles/LayerControls.module.css";
+import styles from "../styles/module/LayerControls.module.css";
 
 
 
@@ -20,19 +20,19 @@ const LayerControls = ({ onViewModeChange, currentMode }: LayerControls) => {
           className={`${styles.button} ${currentMode === "points" ? styles.active : ""}`}
           onClick={() => onViewModeChange("points")}
         >
-          📍 Points Only
+         Points Only
         </button>
         <button
           className={`${styles.button} ${currentMode === "polygons" ? styles.active : ""}`}
           onClick={() => onViewModeChange("polygons")}
         >
-          🟧 Polygons Only
+          Polygons Only
         </button>
         <button
           className={`${styles.button} ${currentMode === "both" ? styles.active : ""}`}
           onClick={() => onViewModeChange("both")}
         >
-          🔄 Both
+          Both
         </button>
       </div>
     </div>

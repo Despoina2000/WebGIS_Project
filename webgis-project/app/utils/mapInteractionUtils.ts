@@ -26,7 +26,7 @@ export const setupLayerHoverCursor = (
   layerId: string,
 ): void => {
   map.on("mouseenter", layerId, () => {
-    map.getCanvas().style.cursor = "pointer";
+    map.getCanvas().style.cursor = "help";
   });
 
   map.on("mouseleave", layerId, () => {

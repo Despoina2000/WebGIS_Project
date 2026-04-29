@@ -2,16 +2,24 @@
 
 import { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
-import styles from "../styles/MapQL.module.css";
+import styles from "../styles/module/MapQL.module.css";
 import LayerControls from "./LayerControls";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { ViewMode } from "../models/types";
 import { updateLayerVisibility } from "../utils/layerVisibilityUtils";
 import { loadGeoJsonData } from "../utils/dataLoadingUtils";
-import { addClusterCountLayer, addClusterLayer, addGeoJsonSources, addPointLayer, addPolygonLayers } from "../utils/layerSetUpUtils";
+import {
+  addClusterCountLayer,
+  addClusterLayer,
+  addGeoJsonSources,
+  addPointLayer,
+  addPolygonLayers,
+} from "../utils/layerSetUpUtils";
 import { separateGeoJsonByType } from "../utils/geoJsonUtils";
-import { setupClickHandlers, setupLayersHoverCursor } from "../utils/mapInteractionUtils";
-
+import {
+  setupClickHandlers,
+  setupLayersHoverCursor,
+} from "../utils/mapInteractionUtils";
 
 const URL_SOURCE = "/data/combined.json";
 
@@ -43,8 +51,6 @@ const MapQL = () => {
         style: "mapbox://styles/mapbox/streets-v12", // basemap style
         center: [23.73, 37.99], // Center on your data [lng, lat]
         zoom: 12,
-        pitch: 0, // IMPORTANT: 0 = no tilt (flat view)
-        bearing: 0, // No rotation
       });
 
       // Wait for map to load before adding data
@@ -91,4 +97,3 @@ const MapQL = () => {
 };
 
 export default MapQL;
-
