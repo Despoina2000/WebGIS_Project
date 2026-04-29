@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "name": "Observation Point Alpha",
+        "category": "Sensor",
+        "description": "Environmental monitoring station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [23.7275, 37.9838]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "name": "Observation Point Beta",
+        "category": "Station",
+        "description": "Traffic monitoring location"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [23.7350, 37.9900]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "name": "Restricted Zone A",
+        "type": "Protected Area",
+        "info": "Construction restricted"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.7200, 37.9800],
+            [23.7400, 37.9800],
+            [23.7400, 38.0000],
+            [23.7200, 38.0000],
+            [23.7200, 37.9800]
+          ]
+        ]
+      }
+    }
+  ]
+}
